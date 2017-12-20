@@ -1,0 +1,19 @@
+Tampilkan menu login pada Mobile Application
+User memasukkan USERNAME dan PASSWORD
+if User memilih "login":
+	System memvalidasi USERNAME dan PASSWORD di database
+	if USERNAME dan PASSWORD valid:
+		COUNTER = 0
+		loop:
+			if COUNTER==0:
+				OTP <- GENERATE_OTP(USERNAME,PASSWORD)
+				COUNTER = 60
+			endif
+			Tampilkan OTP
+			Diam selama 1 detik
+			COUNTER <- COUNTER -1
+			if User memilih "logout":
+				end
+		endloop
+	endif
+endif

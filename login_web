@@ -1,0 +1,17 @@
+Tampilkan menu login
+User menggunakan applikasi untuk mendapatkan kode OTP
+OTP_CLIENT <- OTP dari applikasi 
+User memasukkan USERNAME, PASSWORD, dan OTP
+If user memilih "Login":
+	Server memvalidasi USERNAME dan PASSWORD di database
+	If USERNAME dan PASSWORD valid:
+		OTP_SERVER <- GENERATE_OTP(USERNAME, PASSWORD)
+		if OTP_SERVER == OTP_CLIENT:
+			Tampilkan login berhasil
+		else:
+			Tampilkan login gagal
+		endif
+	else:
+		Tampilkan login gagal
+	endif
+endif

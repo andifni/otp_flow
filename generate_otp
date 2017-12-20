@@ -1,0 +1,7 @@
+GENERATE_OTP(USERNAME, PASSWORD):
+	TIME <- System mendapatkan waktu sekarang (format : yyyy-MM-dd HH:mm)
+	PESAN <- USERNAME + PASSWORD + TIME
+	PESAN <- MD5(PESAN)
+	PESAN <- SHA1(PESAN)
+	OTP <- ambil karakter pertama dari PESAN
+	return OTP
